@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <!-- Title TextView -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daily Skin Care Assistant"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Product Selection -->
+    <TextView
+        android:id="@+id/productLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="16dp"
+        android:text="Select Skincare Product:"
+        android:textSize="16sp" />
+
+    <Spinner
+        android:id="@+id/productDropdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/productLabel"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Routine Time Entry -->
+    <TextView
+        android:id="@+id/routineTimeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/productDropdown"
+        android:layout_marginTop="16dp"
+        android:text="Set Reminder Time (minutes):"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/routineTimeEntry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/routineTimeLabel"
+        android:layout_marginTop="8dp"
+        android:hint="Enter time in minutes"/>
+
+    <!-- Add Routine Button -->
+    <Button
+        android:id="@+id/addRoutineButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/routineTimeEntry"
+        android:layout_marginTop="16dp"
+        android:text="Add Routine"
+        android:onClick="addRoutine"/>
+
+    <!-- Open Link Button -->
+    <Button
+        android:id="@+id/openLinkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addRoutineButton"
+        android:layout_marginTop="16dp"
+        android:text="Open Product Link"
+        android:onClick="openProductLink"/>
+
+    <!-- Display Healthy Routine Button -->
+    <Button
+        android:id="@+id/displayHealthyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/openLinkButton"
+        android:layout_marginTop="16dp"
+        android:text="Display Healthy Skincare Routine"
+        android:onClick="displayHealthyRoutine"/>
+
+</RelativeLayout>
